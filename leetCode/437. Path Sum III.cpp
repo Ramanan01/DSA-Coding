@@ -11,8 +11,8 @@
  */
 class Solution {
 public:
-    void dfs(TreeNode* root, int& targetSum, unordered_map<int, int>& seenCount, 
-             int currSum, int& res) {
+    void dfs(TreeNode* root, int& targetSum, unordered_map<long long int, int>& seenCount, 
+             long long int currSum, int& res) {
         if (!root) {
             return;
         }
@@ -28,7 +28,7 @@ public:
     }
 
     int pathSum(TreeNode* root, int targetSum) {
-        unordered_map<int, int> seenCount;
+        unordered_map<long long int, int> seenCount;
         seenCount[0] = 1;
         int res = 0;
         dfs(root, targetSum, seenCount, 0, res);
